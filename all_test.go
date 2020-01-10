@@ -20,6 +20,36 @@ var uastrings = []struct {
 }{
 	// Bots
 	{
+		title:    "Slackbot-LinkExpanding", // see: https://api.slack.com/robots
+		ua:       "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)",
+		expected: "Browser:Slackbot-LinkExpanding Engine:1.0 Bot:true Mobile:false",
+	},
+	{
+		title:    "Slackbot",
+		ua:       "Slackbot 1.0 (+https://api.slack.com/robots)",
+		expected: "Browser:Slackbot Engine:1.0 Bot:true Mobile:false",
+	},
+	{
+		title:    "Slack-ImgProxy",
+		ua:       "Slack-ImgProxy 0.19 (+https://api.slack.com/robots)",
+		expected: "Browser:Slack-ImgProxy Engine:0.19 Bot:true Mobile:false",
+	},
+	{
+		title:    "apache-httpclient",
+		ua:       "Apache-HttpClient/4.2.3 (java 1.5)",
+		expected: "Browser:Apache-HttpClient-4.2.3 Bot:true Mobile:false",
+	},
+	{
+		title:    "Java",
+		ua:       "Java/1.7.0_65",
+		expected: "Browser:Java-1.7.0_65 Bot:true Mobile:false",
+	},
+	{
+		title:    "Wget",
+		ua:       "Wget/1.12 (linux-gnu)",
+		expected: "Browser:Wget-1.12 Bot:true Mobile:false",
+	},
+	{
 		title:    "GoogleBot",
 		ua:       "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
 		expected: "Mozilla:5.0 Browser:Googlebot-2.1 Bot:true Mobile:false",
@@ -397,12 +427,12 @@ var uastrings = []struct {
 	{
 		title:    "Python",
 		ua:       "Python-urllib/2.7",
-		expected: "Browser:Python-urllib-2.7 Bot:false Mobile:false",
+		expected: "Browser:Python-urllib-2.7 Bot:true Mobile:false",
 	},
 	{
 		title:    "Curl",
 		ua:       "curl/7.28.1",
-		expected: "Browser:curl-7.28.1 Bot:false Mobile:false",
+		expected: "Browser:curl-7.28.1 Bot:true Mobile:false",
 	},
 
 	// WebKit
